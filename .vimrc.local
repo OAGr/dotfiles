@@ -1,0 +1,23 @@
+let NERDTreeQuitOpen = 0
+set tabstop=2 shiftwidth=2 expandtab
+retab!
+
+noremap <leader>q :x<CR>
+inoremap <leader>q <esc>:x<CR>
+nnoremap <leader>s :w<CR>
+inoremap <leader>s <esc>:w<CR>
+
+map <Esc><Esc> :w<CR>
+
+map <leader>y "+y
+map <leader>p "+gp
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+
+let g:ctrlp_funky_syntax_highlight = 1
+
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ }
