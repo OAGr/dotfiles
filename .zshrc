@@ -19,6 +19,8 @@ export TERM="xterm-256color"
 export ANDROID_HOME=$HOME/Downloads/adt-bundle-linux-x86_64-20140702/sdk
 PATH=${PATH}:$ANDROID_HOME/tools
 
+alias v='vim'
+
 alias ll='ls -lah'
 alias copy='xsel -ib'
 alias paste='xsel -b'
@@ -28,6 +30,11 @@ alias gc='git commit -m'
 alias gal='git commit -am'
 alias gpom='git checkout master; git pull origin master'
 alias ,q='exit'
+
+alias ref-linux='vim ~/main/ref/linux.md'
+alias ref-tmux='vim ~/main/ref/tmux.md'
+alias ref-vim='vim ~/main/ref/vim.md'
+alias ref-work='vim ~/main/ref/work.md'
 
 bindkey -v
 
