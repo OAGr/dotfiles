@@ -85,7 +85,7 @@ KEYTIMEOUT=1
 
 # See: https://github.com/ndbroadbent/scm_breeze
 #[ -s "/Users/ozziegooen/.scm_breeze/scm_breeze.sh" ] && source "/Users/ozziegooen/.scm_breeze/scm_breeze.sh"
-#[ -s "/home/ozzi/.scm_breeze/scm_breeze.sh" ] && source "/home/ozzie/.scm_breeze/scm_breeze.sh"
+[ -s "/home/ozzie/.scm_breeze/scm_breeze.sh" ] && source "/home/ozzie/.scm_breeze/scm_breeze.sh"
 #
 #Get FuzzySearch!
 #Cntr-r to load history
@@ -93,6 +93,7 @@ KEYTIMEOUT=1
 source ~/.fzf.zsh
 
 bindkey -s '^a' 'cd ..\n ; ls \n'
+
 
 
 # urxvt (and family) accepts even #RRGGBB
@@ -137,6 +138,3 @@ zle-line-init () {
 zle -N zle-keymap-select
 zle -N zle-line-init
 zle -N zle-line-finish
-
-#zle -N zle-line-init
-#zle -N zle-keymap-select
