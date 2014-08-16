@@ -12,14 +12,14 @@ fi
 
 # Customize to your needs...
 
-for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
+#for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
 
 export TERM="xterm-256color"
 
 export ANDROID_HOME=$HOME/Downloads/adt-bundle-linux-x86_64-20140702/sdk
 PATH=${PATH}:$ANDROID_HOME/tools
 
-alias ll='ls -lah --color'
+alias ll='ls -lah'
 alias copy='xsel -ib'
 alias paste='xsel -b'
 
