@@ -49,3 +49,6 @@ zle -N zle-keymap-select
 
 #set terminal vim insert mode change timeout to 10ms
 KEYTIMEOUT=1
+
+# See: https://github.com/ndbroadbent/scm_breeze
+[ -s "/Users/ozziegooen/.scm_breeze/scm_breeze.sh" ] && source "/Users/ozziegooen/.scm_breeze/scm_breeze.sh"

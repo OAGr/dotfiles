@@ -54,6 +54,15 @@
   simple = log --pretty=format:\" * %s\"
   shortnocolor = log --pretty=format:\"%h %cr %cn %s\"
 
+  # See: http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  #search everything
+  f = "!git ls-files | grep -i"
+  #list aliases
+  la = "!git config -l | grep alias | cut -c 7-"
+
+
   # pull
   pl = pull                         # pull
 
