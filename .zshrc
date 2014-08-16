@@ -23,6 +23,9 @@ alias ll='ls -lah'
 alias copy='xsel -ib'
 alias paste='xsel -b'
 
+alias g='git status'
+alias gc='git commit -m'
+alias gal='git commit -am'
 alias gpom='git checkout master; git pull origin master'
 alias ,q='exit'
 
