@@ -1,1 +1,4 @@
 Bundle 'slim-template/vim-slim.git'
+Bundle 'christoomey/vim-tmux-navigator'
+Plugin 'textobj-user'
+Plugin 'textobj-rubyblock'

@@ -1,5 +1,7 @@
 let NERDTreeQuitOpen = 0
 set tabstop=2 shiftwidth=2 expandtab
+
+runtime macros/matchit.vim
 retab!
 
 noremap <leader>q :x<CR>
