@@ -23,3 +23,10 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
+
+set relativenumber
+
+nnoremap <F5> :UndotreeToggle<cr>
+
+" "Set lookML to be like yaml
+""autocmd BufRead,BufNewFile *.lookml  set syntax=yaml
