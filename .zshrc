@@ -148,3 +148,26 @@ zle-line-init () {
 zle -N zle-keymap-select
 zle -N zle-line-init
 zle -N zle-line-finish
+
+
+today() {
+    echo -n "Today's date is: "
+    date +"%A, %B %-d, %Y"
+}
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+
+export GR_HOME=${HOME}
+export GR_USERNAME=${USER}
+
+for file in $(\ls -1 ${GR_HOME}/engineering/bash/*.sh); do
+  source $file;
+done
+
+for file in $(\ls -1 ${HOME}/.bash/*.sh); do
+  source $file;
+done
+
+export PATH=${GR_HOME}/engineering/bin:${PATH}
