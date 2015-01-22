@@ -14,7 +14,7 @@ fi
 
 #for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
 
-export TERM="xterm-256color-bce"
+export TERM="xterm-256color"
 export tmux="TERM=xterm-256color tmux"
 
 export ANDROID_HOME=$HOME/Downloads/adt-bundle-linux-x86_64-20140702/sdk
