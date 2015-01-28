@@ -15,6 +15,7 @@ fi
 #for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
 
 export TERM="xterm-256color"
+export tmux="TERM=xterm-256color tmux"
 
 export ANDROID_HOME=$HOME/Downloads/adt-bundle-linux-x86_64-20140702/sdk
 PATH=${PATH}:$ANDROID_HOME/tools
@@ -148,3 +149,26 @@ zle-line-init () {
 zle -N zle-keymap-select
 zle -N zle-line-init
 zle -N zle-line-finish
+
+
+today() {
+    echo -n "Today's date is: "
+    date +"%A, %B %-d, %Y"
+}
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+
+export GR_HOME=${HOME}
+export GR_USERNAME=${USER}
+
+for file in $(\ls -1 ${GR_HOME}/engineering/bash/*.sh); do
+  source $file;
+done
+
+for file in $(\ls -1 ${HOME}/.bash/*.sh); do
+  source $file;
+done
+
+export PATH=${GR_HOME}/engineering/bin:${PATH}
