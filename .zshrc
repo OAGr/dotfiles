@@ -150,25 +150,30 @@ zle -N zle-keymap-select
 zle -N zle-line-init
 zle -N zle-line-finish
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+[ -s "/Users/ozziegooen/.scm_breeze/scm_breeze.sh" ] && source "/Users/ozziegooen/.scm_breeze/scm_breeze.sh"
+nvm use --delete-prefix v12.6.0
 
-today() {
-    echo -n "Today's date is: "
-    date +"%A, %B %-d, %Y"
-}
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+#https://kevgriffin.com/how-to-run-visual-studio-code-from-terminal-on-mac-osx/
+#code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
 
-export GR_HOME=${HOME}
-export GR_USERNAME=${USER}
+#export NVM_DIR="/usr/local/opt/nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="/Users/ozziegooen/miniconda3/bin:$PATH"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="~/bin:$PATH"
 
-for file in $(\ls -1 ${GR_HOME}/engineering/bash/*.sh); do
-  source $file;
-done
+# OPAM configuration
+. /Users/ozziegooen/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
-for file in $(\ls -1 ${HOME}/.bash/*.sh); do
-  source $file;
-done
-
-export PATH=${GR_HOME}/engineering/bin:${PATH}
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /usr/local/Cellar/nvm/0.33.4/versions/node/v10.14.1/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /usr/local/Cellar/nvm/0.33.4/versions/node/v10.14.1/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
